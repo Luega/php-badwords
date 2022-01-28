@@ -1,18 +1,9 @@
 <!-- PHP -->
 <?php
 // dichiaro la variabile string
-$string = "Ho sceso, dandoti il braccio, almeno un milione di scale
-e ora che non ci sei è il vuoto ad ogni gradino.
-Anche così è stato breve il nostro lungo viaggio.
-Il mio dura tuttora, nè più mi occorrono
-le coincidenze, le prenotazioni,
-le trappole, gli scorni di chi crede
-che la realtà sia quella che si vede.
-Ho sceso milioni di scale dandoti il braccio
-non già perché con quattr’occhi forse si vede di più.
-Con te le ho scese perché sapevo che di noi due
-le sole vere pupille, sebbene tanto offuscate,
-erano le tue.";
+$string = "Nell'antica Roma i censori erano quei magistrati incaricati di gestire il censimento e, più tardi, di vigilare sulla condotta morale dei cittadini. Nei secoli la censura, ovvero il termine riferito al loro mandato, ampliò il suo significato a inglobare tutte le azioni di controllo o divieto della libera espressione in tutti i campi della pubblicazione delle idee. Negli anni più bui del Medioevo e della Controriforma, la censura fu una delle funzioni più strumentali dell'Inquisizione.
+
+Col passare del tempo la censura tornò ad assumere, oltre a una funzione religiosa, anche uno scopo politico e militare. I vari governi o le varie istituzioni di potere la estesero a seconda delle epoche non solo a giornali o manifesti ma anche a libri, dipinti, e poi film e altre forme artistiche. Nel corso degli anni le censure riguardarono fatti di portata storica (dal rogo nazista dei libri alla proscrizione di film ritenuti immorali) a altri provvedimenti più minuti (come l'intervento su** alcuni cartoni animati** per bambini o addirittura su alcuni loghi di brand). Oggi la censura assume forme rinnovate, che comprendono il controllo del web ma anche l'involontario bigottismo di certi algoritmi social.";
 
 // creo la variabile lunghezza della string, utilizzando la funzione apposita
 $lenString = strlen($string);
@@ -60,7 +51,7 @@ $lencensuredString = strlen($censuredString);
                 <img class="img-thumbnail" src="./img/censura1-620x350-1.png" alt="censura">
                 <!-- creo form per digitare la parola da censurare -->
                 <form class=" d-flex flex-column" action="?badWord=">
-                     <input class="form-control" type="text" name="badWord" placeholder="Scrivi la parola che vuoi censurare...">
+                     <input class="form-control" type="text" name="badWord" pattern="[^' ']+" title="Only one word. No space allowed." placeholder="Scrivi la parola che vuoi censurare...">
                      <button class="btn btn-outline-warning mw-50 mt-3 align-self-center" type="submit">CENSURA</button>
                 </form>
             </div>
