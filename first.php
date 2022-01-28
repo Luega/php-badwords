@@ -42,34 +42,38 @@ $lencensuredString = strlen($censuredString);
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid vh-100 d-flex bg-zucchero bg-gradient">
+    <div class="container-fluid min-vh-100 p-5 d-flex bg-zucchero bg-gradient">
         <div class="row w-75 h-75 m-auto d-flex text-center">
             <!-- STRINGA NON CENSURATA -->
-            <div class="col d-flex  flex-column pergamena">
-                <h1>TESTO ORIGINALE</h1>
+            <div class="col-12 col-xl-4 d-flex  flex-column pergamena p-3 justify-content-between align-items-center">
+                <h1 class="mw-75">TESTO ORIGINALE</h1>
                 <!-- stampo la stringa -->
-                <p class="my-5"><?php echo $string; ?></p>
-                <h4>Lunghezza:</h4>
-                <!-- stampo la lunghezza della stringa -->
-                <p><?php echo $lenString; ?></p>
+                <p class="p-4"><?php echo $string; ?></p>
+                <div class="box">
+                    <h4>Lunghezza:</h4>
+                    <!-- stampo la lunghezza della stringa -->
+                    <p><?php echo $lenString; ?></p>
+                </div>
             </div>
             <!-- FORM PER SCRIVERE LA PAROLA DA CENSURARE -->
-            <div class="col d-flex  flex-column justify-content-center">
+            <div class="col-12 col-xl-4 my-5 my-xl-0 d-flex  flex-column justify-content-center">
                 <img class="img-thumbnail" src="./img/censura1-620x350-1.png" alt="censura">
                 <!-- creo form per digitare la parola da censurare -->
                 <form class=" d-flex flex-column" action="?badWord=">
                      <input class="form-control" type="text" name="badWord" placeholder="Scrivi la parola che vuoi censurare...">
-                     <button class="btn btn-outline-warning w-50 mt-3 align-self-center" type="submit">CENSURA</button>
+                     <button class="btn btn-outline-warning mw-50 mt-3 align-self-center" type="submit">CENSURA</button>
                 </form>
             </div>
             <!-- STRINGA CENSURATA -->
-            <div class="col d-flex  flex-column pergamena">
-                <h1>TESTO CENSURATO</h1>
+            <div class="col-12 col-xl-4 d-flex  flex-column pergamena p-3 justify-content-between align-items-center">
+                <h1 class="mw-75">TESTO CENSURATO</h1>
                 <!-- stampo la stringa censurata -->
-                <p class="my-5"><?php echo $censuredString; ?></p>
-                <h4>Lunghezza:</h4>
-                <!-- stampo la lunghezza della stringa censurata -->
-                <p><?php echo $lencensuredString; ?></p>
+                <p class="p-4"><?php echo $censuredString; ?></p>
+                <div class="box">
+                    <h4>Lunghezza:</h4>
+                    <!-- stampo la lunghezza della stringa censurata -->
+                    <p><?php echo $lencensuredString; ?></p>
+                </div>
             </div>
         </div>
     </div>
