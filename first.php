@@ -1,6 +1,12 @@
 <?php
-$string="This is the way";
+// dichiaro la variabile stringa
+$string="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum et maiores repudiandae ut commodi saepe quae voluptatum aspernatur dignissimos officiis, cum reiciendis itaque delectus adipisci vitae voluptatibus non ad necessitatibus.";
+// creo la variabile lunghezza della stringa utilizzando la funzione apposita
 $lenString = strlen($string);
+
+// recuper del parametro badWords nell´url
+$_GET["badWords"];
+
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +19,10 @@ $lenString = strlen($string);
 </head>
 <body>
     <h1>Nome stringa</h1>
+    <!-- stampo la stringa -->
     <p><?php echo $string; ?></p>
     <h1>Lunghezza stringa</h1>
+    <!-- stampo la lunghezza della stringa -->
     <p><?php echo $lenString; ?></p>
 </body>
 </html>
