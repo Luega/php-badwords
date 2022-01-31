@@ -11,11 +11,8 @@ $lenString = strlen($string);
 // creo la variabile per il recupero del parametro badWords nell´url
 $badWord = $_GET["badWord"];
 
-// creo la variabile di censura
-$censure = "(***)";
-
 // creo nuova variabile string censurata: sostituzione del valore della variabile badWord con quello della variabile censure nella variabile string
-$censuredString = str_replace($badWord, $censure, $string);
+$censuredString = str_replace($badWord, "***", $string);
 
 // creo la variabile lunghezza della censuredString, utilizzando la funzione apposita
 $lencensuredString = strlen($censuredString);
